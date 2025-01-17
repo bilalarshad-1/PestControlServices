@@ -1,0 +1,45 @@
+.faq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .faq-table th,
+  .faq-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .faq-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .faq-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  p {
+    font-weight: bold;
+    color: green;
+    margin-top: 10px;
+  }
+  
