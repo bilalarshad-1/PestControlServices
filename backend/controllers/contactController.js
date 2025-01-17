@@ -10,6 +10,26 @@ const getContacts = async (req, res) => {
     }
 };
 
+const updateContact = async (req, res) => {
+    const { id } = req.params; 
+    const { name, phoneNumber, email, message } = req.body;
+
+    try {
+        const updatedContact = await Contact.findByIdAndUpdate(
+            id, 
+            { name, phoneNumber, email, message }, 
+            { new: true, runValidators: true } 
+        );
+
+        if (!updatedContact) {
+            return res.status(404).json({ message: 'Contact not found' });
+        }
+
+        res.json(updatedContact); 
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+};
 
 const createContact = async (req, res) => {
     const { name, phoneNumber, email, message } = req.body;
