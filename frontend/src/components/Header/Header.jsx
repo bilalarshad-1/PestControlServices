@@ -1,16 +1,29 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import sleep from "../../pictures/sleeping.jpeg";
+import MetaTags from "../../MetaTags/MetaTags";
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
  
   return (
-    <header>
 
+    <> 
+  <MetaTags 
+  title="Professional Toronto Pest Control Services | Safe & Effective"
+  description="Eliminate pests from your property with our trusted pest control services in Toronto. Eco-friendly solutions for residential and commercial needs."
+  keywords="Toronto pest control, pest control services, pest extermination, eco-friendly pest removal"
+  
+  
+  
+  
+  
+  />
+
+    <header>
+    
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link className="flex items-center">
@@ -139,6 +152,7 @@ const Navbar = () => {
       </nav>
       <hr />
     </header>
+    </>
   );
 };
 

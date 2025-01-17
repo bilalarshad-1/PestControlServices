@@ -45,4 +45,4 @@ const deleteFaq = async (req, res) => {
   }
 };
 
-module.exports = { getFaqs, createFaq, updateFaq, deleteFaq };
+module.exports = { getFaqs, createFaq,  deleteFaq };

@@ -1,8 +1,8 @@
 const express = require('express');
-const { getFaqs, createFaq, updateFaq, deleteFaq } = require('../controllers/faqController');
+const { getFaqs, createFaq,  deleteFaq } = require('../controllers/faqController');
 
 const router = express.Router();
 router.route('/').get(getFaqs).post(createFaq);
-router.route('/:id').put(updateFaq).delete(deleteFaq);
+router.route('/:id').delete(deleteFaq);
 
 module.exports = router;
